@@ -3,8 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
   return (
-    <div>
-        <h1>Welcome to the Layout page</h1>
+    <div className="min-h-screen">
         <Outlet />
     </div>
   )
