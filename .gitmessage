@@ -1,0 +1,7 @@
+# Commit Format: <type>: <short summary>
+# Types: feat | fix | docs | style | refactor | test | chore
+# Example: feat: add resume analyzer form
+
+# ----------------------
+# Write your commit message above
+# Lines starting with '#' will be ignored
