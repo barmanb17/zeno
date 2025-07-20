@@ -1,7 +1,7 @@
-import * as React from "react"
+import React from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import { PenTool, ImageIcon, Scissors, Eraser, FileText, Edit3, Sparkles } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "../lib/utils"
 
 // Navigation items with icons and labels
 const navigationItems = [
@@ -37,13 +37,14 @@ const navigationItems = [
   },
 ]
 
-export default function Sidebar() {
+export default function Sidebar({ onNavigate }) {
   const navigate = useNavigate()
   const location = useLocation()
   const activeItem = location.pathname
 
   const handleNavigation = (url) => {
     navigate(url)
+    if (onNavigate) onNavigate() // For closing mobile sidebar
   }
 
   return (
@@ -76,20 +77,20 @@ export default function Sidebar() {
                   "relative w-full h-12 px-4 rounded-xl transition-all duration-200 ease-out",
                   "hover:bg-blue-50 group cursor-pointer flex items-center gap-4",
                   "text-gray-600 hover:text-blue-700",
-                  isActive && ["bg-blue-50 text-blue-700", "shadow-lg shadow-blue-500/10", "border border-blue-200"],
+                  isActive && "bg-blue-50 text-blue-700 shadow-lg shadow-blue-500/10 border border-blue-200"
                 )}
               >
                 {/* Icon */}
                 <div
                   className={cn(
                     "flex h-8 w-8 items-center justify-center rounded-lg transition-all duration-200",
-                    isActive ? "bg-gradient-to-br from-blue-500 to-blue-600" : "bg-gray-100 group-hover:bg-blue-100",
+                    isActive ? "bg-gradient-to-br from-blue-500 to-blue-600" : "bg-gray-100 group-hover:bg-blue-100"
                   )}
                 >
                   <Icon
                     className={cn(
                       "h-4 w-4 transition-colors duration-200",
-                      isActive ? "text-white" : "text-gray-500 group-hover:text-blue-600",
+                      isActive ? "text-white" : "text-gray-500 group-hover:text-blue-600"
                     )}
                   />
                 </div>
