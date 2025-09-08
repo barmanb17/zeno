@@ -31,7 +31,7 @@ const navigationItems = [
     url: "/resume-reviewer",
   },
   {
-    title: "Article Writer",
+    title: "Article Writers",
     icon: Edit3,
     url: "/article-writer",
   },
