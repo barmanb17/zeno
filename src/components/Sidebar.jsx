@@ -102,7 +102,7 @@ export default function Sidebar({ onNavigate }) {
                   <div className="absolute right-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-l-full bg-gradient-to-b from-blue-500 to-blue-600" />
                 )}
               </button>
-            )
+            )gh
           })}
         </nav>
       </div>

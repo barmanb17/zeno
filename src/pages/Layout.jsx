@@ -9,12 +9,12 @@ const Layout = () => {
 
   return (
     <div className='flex h-screen'>
-      {/* Desktop Sidebar */}
+      {/* Desktop Sidebar added */}
       <div className="hidden md:block">
         <Sidebar />
       </div>
 
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button added */}
       <div className="md:hidden fixed top-4 left-4 z-50">
         <button
           onClick={() => setSidebar(!sidebar)}
